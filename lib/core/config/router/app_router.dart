@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../features/Home/presentation/screens/home_screen.dart';
+
 
 
 
@@ -8,8 +10,8 @@ import 'package:flutter/material.dart';
 abstract class AppRouter {
   static Route generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      //case ChatsScreen.routeName:
-      //  return MaterialPageRoute(builder: (c) => const ChatsScreen());
+      case HomeScreen.routeName:
+       return MaterialPageRoute(builder: (c) => const HomeScreen());
         //return MaterialPageRoute(builder: (_) => OnboardingScreen());
       //case ChatView.routeName:
       // return MaterialPageRoute(builder: (_) => const ChatView());

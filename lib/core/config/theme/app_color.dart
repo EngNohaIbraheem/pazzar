@@ -1,20 +1,15 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
+
 class AppColors {
-  static const primary = Color(0xFF2F2F2F);
-  static const grey = Color(0xFF9E9E9E);
-  static const lightGrey = Color(0xFFF5F5F5);
-  static const green = Color(0xFF4CAF50);
-
-  static const Color background = Color(0xFFECE5DD);
-
-  static const Color greenMessage = Color(0xFFDCF8C6);
-
-  static const Color modalBackground = Color(0xFFF8F8F8);
-
-  static const Color blue = Color(0xFF007AFF);
-
-  }
+  static const background = Color(0xffF7F7F7);
+  static const brown = Color(0xffB28B67);
+  static const pink = Color(0xffF5DDE4);
+  static const blue = Color(0xffDCEEEF);
+  static const grey = Color(0xffE4E7EB);
+  static const orange = Color(0xffF2C39D);
+}
 
 
 

@@ -1,6 +1,8 @@
 import 'core/config/router/app_router.dart';
 import 'package:flutter/material.dart';
 
+import 'features/Home/presentation/screens/home_screen.dart';
+
 
 
 
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       onGenerateRoute: AppRouter.generateRoute,
-      // initialRoute: ChatView.routeName,
+       initialRoute: HomeScreen.routeName,
     );
   }
 }
