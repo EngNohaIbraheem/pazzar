@@ -3,9 +3,6 @@ import 'package:flutter/material.dart';
 
 import 'features/Home/presentation/screens/home_screen.dart';
 
-
-
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -14,12 +11,25 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'shopping online',
       debugShowCheckedModeBanner: false,
+
+      builder: (context, child) {
+        return MediaQuery(
+          data: MediaQuery.of(context).copyWith(
+            textScaler: TextScaler.noScaling,
+          ),
+          child: child!,
+        );
+      },
+
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.deepPurple,
+        ),
         useMaterial3: true,
       ),
+
       onGenerateRoute: AppRouter.generateRoute,
-       initialRoute: HomeScreen.routeName,
+      initialRoute: HomeScreen.routeName,
     );
   }
 }

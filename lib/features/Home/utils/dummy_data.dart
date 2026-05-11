@@ -34,7 +34,7 @@ List<ProductModel> products = [
     color: AppColors.pink,
   ),
   ProductModel(
-    image: 'assets/images/pic2.png',
+    image: 'assets/images/pic1.png',
     title: "Women’s blezer",
     price: '\$20.00',
     color: AppColors.blue,
@@ -46,7 +46,7 @@ List<ProductModel> products = [
     color: AppColors.grey,
   ),
   ProductModel(
-    image: 'assets/images/pic4.png',
+    image: 'assets/images/pic3.png',
     title: "Women’s blezer",
     price: '\$25.00',
     color: AppColors.orange,
