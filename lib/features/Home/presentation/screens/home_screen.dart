@@ -18,57 +18,59 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20),
-          child: Column(
-            children: [
-              const CustomAppBar(),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                const CustomAppBar(),
 
-              const SizedBox(height: 30),
+                const SizedBox(height: 30),
 
-              const CustomSearchField(),
+                const CustomSearchField(),
 
-              const SizedBox(height: 30),
+                const SizedBox(height: 30),
 
-              const HomeBanner(),
+                const HomeBanner(),
 
-              const SizedBox(height: 30),
+                const SizedBox(height: 30),
 
-              const SectionTitle(title: 'Categories'),
+                const SectionTitle(title: 'Categories'),
 
-              const SizedBox(height: 20),
+                const SizedBox(height: 20),
 
-              SizedBox(
-                height: 130,
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: categories.length,
-                  itemBuilder: (context, index) {
-                    return CategoryItem(
-                      category: categories[index],
-                    );
-                  },
-                ),
-              ),
-
-              const SizedBox(height: 20),
-
-              Expanded(
-                child: GridView.builder(
-                  itemCount: products.length,
-                  gridDelegate:
-                  const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    mainAxisSpacing: 20,
-                    crossAxisSpacing: 20,
-                    childAspectRatio: .68,
+                SizedBox(
+                  height: 130,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: categories.length,
+                    itemBuilder: (context, index) {
+                      return CategoryItem(
+                        category: categories[index],
+                      );
+                    },
                   ),
-                  itemBuilder: (context, index) {
-                    return ProductCard(
-                      product: products[index],
-                    );
-                  },
                 ),
-              ),
-            ],
+
+                const SizedBox(height: 20),
+
+                Expanded(
+                  child: GridView.builder(
+                    itemCount: products.length,
+                    gridDelegate:
+                    const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      mainAxisSpacing: 20,
+                      crossAxisSpacing: 20,
+                      childAspectRatio: .68,
+                    ),
+                    itemBuilder: (context, index) {
+                      return ProductCard(
+                        product: products[index],
+                      );
+                    },
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

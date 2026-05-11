@@ -2,6 +2,7 @@ import 'core/config/router/app_router.dart';
 import 'package:flutter/material.dart';
 
 import 'features/Home/presentation/screens/home_screen.dart';
+import 'features/products/presentation/screens/products_details_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
       ),
 
       onGenerateRoute: AppRouter.generateRoute,
-      initialRoute: HomeScreen.routeName,
+      initialRoute: ProductDetailsScreen.routeName,
     );
   }
 }
