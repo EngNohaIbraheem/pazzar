@@ -40,8 +40,9 @@ class ProductImageSection extends StatelessWidget {
               ),
             ),
 
-            Image.network(
-              'https://i.imgur.com/QwhZRyL.png',
+
+    Image.asset(
+    'assets/images/pic1.png',
               height: 380,
               fit: BoxFit.contain,
             ),
