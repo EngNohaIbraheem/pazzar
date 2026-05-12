@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../checkk_out_ttttt/screens/shipping_screen.dart';
-import '../../../payment/screens/payment_screen.dart';
 
 class CartSummary extends StatelessWidget {
   const CartSummary({super.key});
@@ -46,7 +44,7 @@ class CartSummary extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                Navigator.pushNamed(context, ShippingScreen.routeName);
+               // Navigator.pushNamed(contextext, ShippingScreen.routeName);
 
               },
               child: const Text(

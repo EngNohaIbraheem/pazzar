@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../checkk_out_ttttt/screens/shipping_screen.dart';
-import '../../../payment/screens/payment_screen.dart';
 
 class CartSummarySection extends StatelessWidget {
   final double subtotal;
@@ -34,7 +32,7 @@ class CartSummarySection extends StatelessWidget {
             ),
             onPressed: () {
 
-              Navigator.pushNamed(context, ShippingScreen.routeName);
+              // Navigator.pushNamed(context, ShippingScreen.routeName);
 
             },
             child: const Text(
