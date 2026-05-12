@@ -7,7 +7,6 @@ import '../widgets/custum_search_field.dart';
 import '../widgets/home_banner.dart';
 import '../widgets/product_card.dart';
 import '../widgets/section_title.dart';
-
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
   static const routeName = "HomeScreen";
@@ -20,6 +19,7 @@ class HomeScreen extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           child: SingleChildScrollView(
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const CustomAppBar(),
 
@@ -52,22 +52,22 @@ class HomeScreen extends StatelessWidget {
 
                 const SizedBox(height: 20),
 
-                Expanded(
-                  child: GridView.builder(
-                    itemCount: products.length,
-                    gridDelegate:
-                    const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      mainAxisSpacing: 20,
-                      crossAxisSpacing: 20,
-                      childAspectRatio: .68,
-                    ),
-                    itemBuilder: (context, index) {
-                      return ProductCard(
-                        product: products[index],
-                      );
-                    },
+                GridView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: products.length,
+                  gridDelegate:
+                  const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 20,
+                    crossAxisSpacing: 20,
+                    childAspectRatio: .68,
                   ),
+                  itemBuilder: (context, index) {
+                    return ProductCard(
+                      product: products[index],
+                    );
+                  },
                 ),
               ],
             ),
